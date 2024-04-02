@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*For this about us page of mine i used code from here for reference in order to achieve my desired look:
+    W3Layouts,2024.Shipper – Transportation and Logistics WordPress Theme, 13 January 2024.[Online].Available at:https://w3layouts.com/template/shipper-transportation-and-logistics-wordpress-theme/ [Accessed 27 March 2024].
+
+    How To Make A Contact Us Page Using HTML And CSS In 10 Minutes.2020.YouTube video,added by GreatStack.[Online].Available at:https://youtu.be/orBQesFBkXg?si=m5Ss6c5kk6PCPnE1 [Accessed 26 March 2024].
+
+
+    *@
+    @*For getting my social media links i used this video as a reference:
+    How to create social media icons using HTML & CSS.2022.YouTube video,added by CodewithAnas.[Online].Available at:https://youtu.be/lpuOcEpfMjg?si=Jr0lAOJQNjLrpM-H [Accessed 26 March 2024].
+    *@
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px; 
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: scale(1); /* This is to adjust the amount it will zoom in */
+            transition: transform 0.3s ease; /* This makes my transition for zoom effect smoother */
+        }
+
+            .container:hover {
+                transform: scale(1.02);
+            }
+
+        .content-container {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        header, footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-style:italic;
+        }
+        h2{
+            color: #333;
+            margin-bottom: 10px;
+            font-style:italic;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .section-container {
+            margin-bottom: 20px;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+            .social-media a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-color: #0077b5;
+                color: #fff;
+                font-size: 20px;
+                line-height: 40px;
+                text-align: center;
+                margin-right: 10px;
+                border-radius: 50%;
+                transition: background-color 0.3s ease;
+            }
+
+                .social-media a:hover {
+                    background-color: #005a8e;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>About Us</h1>
+        </header>
+        <div class="content-container">
+            <div class="section-container">
+                <h2>Our Story</h2>
+                <p>
+
+                    At Khumalo Craft, our journey began with a simple yet profound passion for creativity and craftsmanship. Founded by a group of artisans with a shared vision, our company embodies the spirit of tradition, innovation, and excellence.
+
+                    Rooted in the vibrant culture and rich heritage of our homeland, each piece we create is a testament to the beauty and diversity of African artistry. Inspired by the rhythmic beats of traditional music, the vivid colors of our landscapes, and the stories passed down through generations, Khumalo Craft celebrates the essence of African identity in every creation.
+
+                    From intricately woven baskets to hand-carved wooden sculptures, every product reflects the skillful hands and heartfelt dedication of our artisans. We take pride in preserving age-old techniques while infusing contemporary designs, resulting in timeless pieces that resonate with modern aesthetics.
+
+                    But our story goes beyond craftsmanship; it's about community, empowerment, and sustainability. By partnering with local cooperatives and empowering artisans with fair wages and dignified working conditions, we strive to uplift communities and foster economic independence.
+
+                    At Khumalo Craft, we believe that every piece tells a story – a story of culture, heritage, and the human spirit. As we continue on our journey, we invite you to join us in celebrating the beauty of African craftsmanship and the boundless creativity that knows no bounds. Welcome to our story. Welcome to Khumalo Craft.
+                </p>
+            </div>
+            <div class="section-container">
+                <h2>Our Mission</h2>
+                <p>
+
+                    At Khumalo Craft, our mission is to celebrate creativity, culture, and craftsmanship by offering meticulously crafted artisanal products that resonate with authenticity and passion.
+
+                    We strive to uphold the rich traditions of craftsmanship passed down through generations, while also embracing innovation and contemporary design. Our commitment to quality ensures that each piece we create is not just an object, but a testament to the skill, dedication, and creativity of our artisans.
+
+                    We are dedicated to promoting sustainable practices and supporting local communities. By sourcing materials responsibly and collaborating with local artisans, we aim to empower individuals and preserve traditional craftsmanship for generations to come.
+
+                    Through our unique and handcrafted products, we aspire to inspire joy, beauty, and connection. Whether it's a handwoven textile, a beautifully carved piece of wood, or a meticulously crafted pottery item, we believe that every Khumalo Craft creation tells a story and enriches the lives of those who encounter it. Join us on our journey as we celebrate the art of craftmanship and the beauty of handmade creations.
+                </p>
+            </div>
+            <div class="section-container">
+                <h2>Connect with Us</h2>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Company Name. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

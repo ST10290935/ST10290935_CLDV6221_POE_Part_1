@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*For this home page of mine i used code from here for reference in order to achieve my desired look:
+    W3Layouts,2024.Shipper – Transportation and Logistics WordPress Theme, 13 January 2024.[Online].Available at:https://w3layouts.com/template/shipper-transportation-and-logistics-wordpress-theme/ [Accessed 27 March 2024].
+    *@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your MVC Application</title>
+   
+    <link href="//fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+          rel="stylesheet">
+
+    
+    
+    <style>
+      
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: lightgoldenrodyellow; 
+             color: #333;
+            
+        }
+
+        header {
+            background-color:lightgoldenrodyellow;
+            color: #fff;
+            padding: 15px 0;
+        }
+
+        .navbar-toggler {
+            border-color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .title-hero-19 {
+            color: #343a40;
+            font-size: 2em;
+            font-style:italic;
+            
+        }
+
+        .banner-view {
+            background-color: white;
+            padding: 50px 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* this add a shadow using a gradient of colors */
+        }
+
+        .banner-info {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative; 
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+            padding: 20px;
+            background-color: #f0f0f0; 
+        }
+
+            .banner-info::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), url('banner-image.jpg'); /* Replace 'banner-image.jpg' with your actual image URL */
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                z-index: -1;
+            }
+
+        .grid-hero-19 {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative; 
+        }
+
+            .grid-hero-19::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                z-index: -1; /* this is to make sure that any change in the background will remain behind the container*/
+            }
+
+            .grid-hero-19:hover {
+                transform: scale(1.05);
+            }
+
+            .grid-hero-19:nth-child(1)::before {
+                background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), url('background-image-1.jpg'); /* Replace 'background-image-1.jpg' with your actual image URL */
+                background-size: cover;
+                background-position: center;
+                color: white;
+                background-color: olivedrab; 
+            }
+
+            .grid-hero-19:nth-child(2)::before {
+                background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), url('background-image-2.jpg'); /* Replace 'background-image-2.jpg' with your actual image URL */
+                background-size: cover;
+                background-position: center;
+                background-color: navajowhite; 
+            }
+
+            .grid-hero-19:nth-child(3)::before {
+                background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), url('background-image-3.jpg'); /* Replace 'background-image-3.jpg' with your actual image URL */
+                background-size: cover;
+                background-position: center;
+                background-color: lightblue;
+            }
+
+            .grid-hero-19 span {
+                font-size: 40px;
+                color: #343a40;
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            .grid-hero-19 h5 a {
+                color: #343a40;
+                text-decoration: none;
+            }
+
+                .grid-hero-19 h5 a:hover {
+                    color: #007bff;
+                }
+
+        .title-content h6 {
+            color: gray;
+            font-size: 2em;
+            font-style: oblique;
+        }
+
+        .title-w3l {
+            color: gray;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .container {
+            border-radius: 50px; /* This rounds the edges of my container */
+            color: darkgray;
+        }
+
+        .shadow-container {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+
+        .title-pr-lg-5 {
+            color: white;
+        }
+
+        .logo-container {
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 0px; 
+        }
+
+        .logo-container img {
+            max-width: 100px; /* Adjust the maximum width of my logo */
+            margin-left: auto; /* Move my logo to the right */
+        }
+       
+
+    </style>
+</head>
+<body>
+   
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                   
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="w3l-main-slider banner-slider" id="home">
+        <div class="slider-info banner-view banner-top1">
+            <div class="container shadow-container">
+               
+                <div class="banner-info header-hero-19">
+                    <p class="text-tag"></p>
+                    <h3 class="title-hero-19">From Clay To Canvas</h3>
+                </div>
+                <div class="d-grid grid-col-3 mai-hero-19">
+                    <div class="grid-hero-19">
+                        <span class="fas fa-box"></span>
+                        <div class="right-cont-19">
+                            <p class="sub-paragraph"> </p>
+                            <h5>Arts</h5>
+                        </div>
+                    </div>
+                    <div class="grid-hero-19">
+                        <span class="fas fa-city"></span>
+                        <div class="right-cont-19">
+                            <p class="sub-paragraph">
+
+                            </p>
+                            <h5>Crafts</h5>
+                        </div>
+                    </div>
+                    <div class="grid-hero-19 third-gdw3">
+                        <span class="fas fa-sitemap"></span>
+                        <div class="right-cont-19">
+                            <p class="sub-paragraph"> </p>
+                            <h5>Painting</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="w3l-3-grids py-5" id="grids-3">
+        <div class="container py-md-5 py-2 shadow-container">
+           
+            <div class="row mb-5 pb-lg-4">
+                <div class="col-lg-6 pr-lg-3">
+                    <div class="title-content text-left">
+                        <div class="logo-container">
+                           
+                        </div>
+                        <h6 class="title-subhny mb-2">About Us</h6>
+                        <h3 class="title-w3l">
+                            At our company, we believe in delivering top-quality industrial services that exceed our clients' expectations. With a dedicated team of professionals and years of experience in the industry, we strive to provide innovative solutions tailored to meet the unique needs of each project. Our commitment to excellence is evident in every aspect of our work, from meticulous planning to precise execution. We understand the importance of reliability and efficiency in today's competitive market, which is why we prioritize clear communication and transparency throughout the entire process. By leveraging cutting-edge technology and staying up-to-date with the latest advancements in the field, we ensure that our clients receive the highest standard of service possible. Whether it's production, industrial, or construction-related projects, you can trust us to deliver results that you can rely on. Partner with us today and experience the difference firsthand.
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4 pl-lg-5">
+                    <p class="pr-lg-5">
+                        <img src="~/image/logo.jpg" style="max-width: 500px;" />
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+   
+
+</body>
+</html>

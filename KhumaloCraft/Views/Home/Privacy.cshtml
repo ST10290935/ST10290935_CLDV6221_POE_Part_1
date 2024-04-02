@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do - Crafts Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+             
+        }
+
+        .container {
+            width: 90%; 
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            width: 100%;
+            font-style:oblique;
+        }
+
+        .art-piece {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            transition: transform 0.3s ease; /* this is for adding in my zoom in effect */
+        }
+
+            .art-piece:hover {
+                transform: scale(1.1); /* this enables the zoom in effect upon hover */
+            }
+
+            .art-piece img {
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+
+        .art-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .art-info > div {
+                margin-bottom: 10px;
+            }
+
+            .art-info div:nth-child(odd) {
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>What We Do</h1>
+
+        <div class="art-piece">
+            <img src="~/image/art1.webp" />
+           
+            <div class="art-info">
+                <div>Title: Waves</div>
+                <div>Description:In a swirling cacophony of colors, a canvas comes alive with abstract expressionism. Bold strokes of crimson clash with serene blues, while splatters of gold dance across the surface, evoking a sense of chaotic harmony.</div>
+                <div>Artist: Chrono</div>
+                <div>Price: R1500.00</div>
+            </div>
+        </div>
+
+        <div class="art-piece">
+            <img src="~/image/art2.webp" />
+           
+            <div class="art-info">
+                <div>Title: Colours</div>
+                <div>Description:A sculpture of twisted metal rises from the ground, its form reminiscent of a phoenix emerging from the ashes. Jagged edges and smooth curves meld together, symbolizing resilience and transformation in the face of adversity.</div>
+                <div>Artist: Benimaru</div>
+                <div>Price: R2000.00</div>
+            </div>
+        </div>
+        <div class="art-piece">
+            <img src="~/image/art3.jpeg" />
+           
+            <div class="art-info">
+                <div>Title: IDK</div>
+                <div>Description: A photograph captures a fleeting moment of tranquility in a bustling cityscape. Amidst the hustle and bustle, a lone figure stands on a bridge, silhouetted against a backdrop of shimmering skyscrapers and fading sunlight, embodying solitude amidst urban chaos.</div>
+                <div>Artist: Yuki</div>
+                <div>Price: R5000.00</div>
+            </div>
+        </div>
+        <div class="art-piece">
+            <img src="~/image/art4.jpg" />
+          
+            <div class="art-info">
+                <div>Title: Burst</div>
+                <div>Description: An installation piece invites viewers to interact with a labyrinth of mirrors and shadows. As participants navigate the maze, their reflections multiply and distort, blurring the lines between reality and illusion, challenging perceptions of self and space.</div>
+                <div>Artist: Aiden</div>
+                <div>Price: R3500.00</div>
+            </div>
+        </div>
+        <div class="art-piece">
+            <img src="~/image/art5.jpg" />
+            
+            <div class="art-info">
+                <div>Title: Smooth</div>
+                <div>Description: A mixed-media collage tells the story of a forgotten era through layers of ephemera and nostalgia. Vintage photographs, yellowed newspaper clippings, and fragmented memories intertwine, inviting viewers to unravel the mysteries of the past and glimpse into bygone worlds.</div>
+                <div>Artist: lulu</div>
+                <div>Price: R1000.00</div>
+            </div>
+        </div>
+        <div class="art-piece">
+            <img src="~/image/homeback.jpg" />
+           
+            <div class="art-info">
+                <div>Title: Ethereal Whispers; </div>
+                <div>Description: Ethereal Whispers" is a captivating brush stroke artwork that transports viewers into a realm of serene beauty and enchanting mystery. Soft pastel hues and delicate brush strokes create an atmosphere of tranquility, while hints of gold and silver add a touch of magic. Through its intricate details and ethereal quality, the painting invites viewers to explore a world where imagination and reality intertwine, offering a glimpse into the mysteries of the unknown.</div>
+                <div>Artist: Tempest</div>
+                <div>Price: R2300.00</div>
+            </div>
+        </div>
+
+       
+
+    </div>
+</body>
+</html>

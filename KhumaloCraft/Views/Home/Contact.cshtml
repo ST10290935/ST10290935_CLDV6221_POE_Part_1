@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*For my contact us page i used this videos as my reference:
+    How To Make A Contact Us Page Using HTML And CSS In 10 Minutes.2020.YouTube video,added by GreatStack.[Online].Available at:https://youtu.be/orBQesFBkXg?si=m5Ss6c5kk6PCPnE1 [Accessed 26 March 2024].
+    *@
+    @*For the adding my google maps in my page i used this video as a reference:
+    How to insert google map in ASP.NET.2022.YouTube video,added by Jigyasu Swap.[Online].Available at:https://youtu.be/Rxp7QpvgJbQ?si=JLWXP-4NUl6o9OS7 [Accessed 25 March 2024].
+    *@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px; 
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items at the start */
+        }
+
+        .contact-left {
+            flex-basis: 60%;
+            padding: 20px;
+        }
+
+        .contact-right {
+            flex-basis: 35%;
+            padding: 20px;
+            background-color: white; 
+            color: black; /* Adjusted text color */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #005a8e;
+        }
+
+        h3 {
+            color: #005a8e; /* Adjusted heading color */
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 22px); /* Adjusted input width */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            background-color: #005a8e; 
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #003c66; 
+            }
+
+        table {
+            width: 100%;
+            color: #005a8e; /* Adjusted table text color */
+        }
+
+            table tr td:first-child {
+                font-weight: bold;
+            }
+
+        .map-container {
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 56.25%;
+            width: 100%;
+            height: 0;
+        }
+
+            .map-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+                pointer-events: auto; /* Enable mouse events on the map */
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send your request</h3>
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Phone">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Subject">
+                    <textarea rows="5" placeholder="Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <h3>Reach us</h3>
+                <table>
+                    <tr>
+                        <td>Email</td>
+                        <td>Crafters@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>+27 80 728 3350</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>12 Radar Drive, Durban, 4051</></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe id="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.694203494087!2d31.003064615476422!3d-29.81480388195244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6c4ee56e9dfcd%3A0x9fd1f8d830b0977b!2s12%20Radar%20Dr%2C%20Merebank%2C%20Durban%2C%204051!5e0!3m2!1sen!2sza!4v1648602570085" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </div>
+
+    <script>
+        
+        document.getElementById('addressLink').addEventListener('click', function (event) {
+            
+            event.preventDefault(); 
+            var address = this.innerText; 
+            var mapIframe = document.getElementById('googleMap'); 
+            mapIframe.src = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15565.83093621896!2d-122.431473!3d37.7739726!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1648600444936!5m2!1sen!2sus'; // Example Google Maps link with a different location
+        });
+    </script>
+</body>
+</html>
